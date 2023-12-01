@@ -1,28 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<style>
-.button {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            animation: gradientAnimation 10s infinite alternate;
+        }
 
-.button1 {background-color: #04AA6D;} /* Green */
-.button2 {background-color: #008CBA;} /* Blue */
-</style>
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(45deg, #ff6b6b, #ffa07a);
+            }
+
+            25% {
+                background: linear-gradient(45deg, #6b6bff, #a07aff);
+            }
+
+            50% {
+                background: linear-gradient(45deg, #6bff6b, #a7ff7a);
+            }
+
+            75% {
+                background: linear-gradient(45deg, #ff6b6b, #ffa07a);
+            }
+
+            100% {
+                background: linear-gradient(45deg, #6b6bff, #a07aff);
+            }
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 36px;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-
-<button class="button button1">hi</button>
-<button class="button button2">bye</button>
-
-pp<br>is<br>cool
+    <h1>Animated Background</h1>
 </body>
+
 </html>
