@@ -4,51 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Background</title>
+    <title>Randomized Animated Background</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             overflow: hidden;
-            animation: gradientAnimation 10s infinite alternate;
+            animation: backgroundAnimation 5s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
         }
 
-        @keyframes gradientAnimation {
+        @keyframes backgroundAnimation {
             0% {
-                background: linear-gradient(45deg, #ff6b6b, #ffa07a);
+                background: #ffffff;
+                color: #000000;
             }
 
             25% {
-                background: linear-gradient(45deg, #6b6bff, #a07aff);
+                background: #f0f0f0;
+                color: #333333;
             }
 
             50% {
-                background: linear-gradient(45deg, #6bff6b, #a7ff7a);
+                background: #d9d9d9;
+                color: #666666;
             }
 
             75% {
-                background: linear-gradient(45deg, #ff6b6b, #ffa07a);
+                background: #bfbfbf;
+                color: #999999;
             }
 
             100% {
-                background: linear-gradient(45deg, #6b6bff, #a07aff);
+                background: #333333;
+                color: #ffffff;
             }
-        }
-
-        h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 36px;
-            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <h1>Animated Background</h1>
+    Hi <span id="randomName"></span>
+    
+    <script>
+        // List of random names
+        const names = ['Jack', 'Elias', 'Rosa', 'Michael', 'Evan', 'Isaac', 'Everett', 'Rafe', 'Christian'];
+
+        // Function to get a random name
+        function getRandomName() {
+            return names[Math.floor(Math.random() * names.length)];
+        }
+
+        // Set a random name to the span
+        document.getElementById('randomName').innerText = getRandomName();
+    </script>
 </body>
 
 </html>
